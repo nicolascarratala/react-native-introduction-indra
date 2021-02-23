@@ -78,6 +78,6 @@ yarn start
 
 https://redux.js.org/
 
-## 2.React-Navigation
+## 3.React-Navigation
 
 https://reactnavigation.org/
