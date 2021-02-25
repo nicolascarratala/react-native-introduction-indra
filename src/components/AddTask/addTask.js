@@ -1,31 +1,48 @@
 import React, { useState } from 'react';
 //Ract Native Components
-import { StyleSheet, TextInput, Text } from 'react-native';
+import { StyleSheet, TextInput, Text, ActivityIndicator } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-//Redux
-import { useDispatch } from 'react-redux'
-//Actions
-import { addTask } from '../../redux/actions'
-
+// Services 
+import { postTask } from '../../services/taskServices';
 
 const AddTask = ({navigation}) => {
 
-  const dispatch = useDispatch();
-
   const[newTask, setNewTask] = useState("");
+  const[spinner, setSpinner] = useState(false);
+
+  const postNewTask = async (task) => {
+    setSpinner(true);
+    const res = await postTask(task);
+    if(res == 200) {
+      navigation.popToTop();
+      navigation.push('Tasks');
+      setSpinner(false);
+    }else{
+      setSpinner(false);
+    }
+  }
 
   return (
     <>
+
       <Text>Escriba tarea:</Text>
-      <TextInput style={ styles.input } onChangeText={text => setNewTask( text )} value={ newTask }/>
+
+      <TextInput 
+        style={ styles.input } 
+        onChangeText={text => setNewTask( text )} 
+        value={ newTask }/>
+
       <TouchableOpacity 
       style={ styles.button } 
-      onPress={() => {
-        dispatch( addTask( {id: Math.random(), title: newTask} ) );
-        navigation.pop();
-      }}>
+      onPress={() => { postNewTask(newTask) }}>
         <Text>Agregar</Text>
       </TouchableOpacity>
+
+      <ActivityIndicator 
+        size="large" 
+        animating={spinner} 
+        color="#0000ff"/>
+
     </>
   );
 }

@@ -1,19 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // React Native Components
-import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar, TouchableOpacity, Touchable } from 'react-native';
+import { 
+  ActivityIndicator, 
+  View, FlatList, 
+  StyleSheet, 
+  Text, 
+  StatusBar } from 'react-native';
 // Redux hook
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTask } from '../../redux/actions';
+// Services 
+import { getTasks } from '../../services/taskServices';
+
+
 
 export default function TaskList() {
 
+  const dispatch = useDispatch()
+
+  const[spinner, setSpinner] = useState(false);
+
   const tasks = useSelector((state) => state.tasks)
+
+  useEffect(() => {
+    const getNewTasks = async () => {
+      setSpinner(true);
+      const res = await getTasks();
+      if(res != 400){
+        dispatch(addTask(JSON.parse(res)));
+        setSpinner(false);
+        return;
+      }
+    }
+    getNewTasks();
+  }, []);
   
-  const renderItem = ({ item }) => <Item title={item.title} />;
+
+  const renderItem = ({ item }) => <Item title={item.tarea} />;
 
   return (
-    <SafeAreaView style={styles.container}>
-      <FlatList data={tasks} renderItem={renderItem} keyExtractor={item => item.id} />
-    </SafeAreaView>
+    <View style={styles.container}>
+
+      <ActivityIndicator 
+        size="large" 
+        animating={spinner} 
+        color="#0000ff"/>
+
+      <FlatList 
+        data={tasks} 
+        renderItem={renderItem} 
+        keyExtractor={item => item.id.toString()} />
+
+    </View>
   );
 }
 

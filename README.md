@@ -6,7 +6,10 @@
 app store : https://apps.apple.com/us/app/expo-go/id982107779
 google play : https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_419
 
-# 1º Sesion guía:
+---------------------------------------
+# 1º Sesion 
+
+## guía:
 - Instalar node.js
 - Instalar Yarn
 - Instalar git
@@ -55,8 +58,10 @@ https://code.visualstudio.com/
 npm install --global expo-cli
 ```
 
+---------------------------------------
+# 2º Sesion 
 
-# 2º Sesion guía:
+## guía:
 - ¿Como empezar?
 - Redux
 - React-Navigation
@@ -81,3 +86,25 @@ https://redux.js.org/
 ## 3.React-Navigation
 
 https://reactnavigation.org/
+
+---------------------------------------
+# 3º Sesion 
+
+## guía:
+- Consumir una apiRest con React Native
+- Crear Splash Screen
+- Hooks
+
+
+## 1.Consumir una apiRest con React Native
+
+https://docs.expo.io/versions/v37.0.0/react-native/network/
+
+## 2.Crear Splash Screen
+
+https://docs.expo.io/guides/splash-screens/
+
+## Hooks
+
+https://es.reactjs.org/docs/hooks-intro.html
+

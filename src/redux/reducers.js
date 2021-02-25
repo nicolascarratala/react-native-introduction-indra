@@ -1,8 +1,8 @@
 const initialState = {
     tasks : [
         {
-            id: '1',
-            title: 'Hello World',
+            id: 1,
+            tarea: 'Hello World',
         }
     ],
  }
@@ -12,7 +12,8 @@ const Reducers = (state = initialState, action) => {
          case "ADD_TASK":
              return {
              ...state,
-             tasks: [...state.tasks, action.payload]}
+             tasks: action.payload
+            }
          default:
              return state;
      }
