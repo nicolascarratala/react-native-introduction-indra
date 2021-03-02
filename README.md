@@ -108,3 +108,22 @@ https://docs.expo.io/guides/splash-screens/
 
 https://es.reactjs.org/docs/hooks-intro.html
 
+---------------------------------------
+# 4º Sesion 
+
+## guía:
+- Repaso de todos los pasos hasta generar apk
+- Generar apk
+- Iniciar o crear sesión
+
+
+## 1.Repaso de todos los pasos hasta generar apk
+link video
+
+## 2.Iniciar o crear sesión
+
+https://expo.io/
+
+## 3.Generar apk
+
+https://docs.expo.io/distribution/building-standalone-apps/
