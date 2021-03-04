@@ -11,6 +11,9 @@ const HomeButtons = ({ navigation }) => {
         <Image style={ styles.tinyLogo } source={ ImageTask } />
         <Text>Tareas</Text>
       </TouchableOpacity>
+      <TouchableOpacity style={ styles.button } onPress={ () => { navigation.push('Map') } }>
+        <Text>Mapa</Text>
+      </TouchableOpacity>
     </View>
   );
 }

@@ -6,6 +6,12 @@
 app store : https://apps.apple.com/us/app/expo-go/id982107779
 google play : https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_419
 
+## Video sesión 4:
+https://drive.google.com/file/d/1zHrDwBYZSvXHz9igwxNmP_714OAIJ25P/view?usp=sharing
+
+## Video sesión 5:
+Próximamente
+
 ---------------------------------------
 # 1º Sesion 
 
@@ -127,3 +133,18 @@ https://expo.io/
 ## 3.Generar apk
 
 https://docs.expo.io/distribution/building-standalone-apps/
+
+---------------------------------------
+# 5º Sesion 
+
+## guía:
+- Agregar nuevas funcionalidades
+
+## Location
+https://docs.expo.io/versions/v40.0.0/sdk/location/
+
+## MapView
+https://docs.expo.io/versions/latest/sdk/map-view/
+
+## Platform
+https://docs.expo.io/tutorial/platform-differences/
