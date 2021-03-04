@@ -7,10 +7,10 @@ app store : https://apps.apple.com/us/app/expo-go/id982107779
 google play : https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_419
 
 ## Video sesión 4:
-https://drive.google.com/file/d/1zHrDwBYZSvXHz9igwxNmP_714OAIJ25P/view?usp=sharing
+https://drive.google.com/file/d/19dFSGdCp9XGIua6ESnou7LozNi5cB9pK/view?usp=sharing
 
 ## Video sesión 5:
-Próximamente
+https://drive.google.com/file/d/1ZMK9UltA8Em5wAtFA8_wpoxvY5rFTsId/view?usp=sharing
 
 ---------------------------------------
 # 1º Sesion 
